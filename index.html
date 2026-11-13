@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veltrix Construction Limited | Premier Engineering & Construction in Dhaka</title>
+  <meta name="description" content="Veltrix Construction Limited - Leading construction, civil engineering, and architectural firm located in Banani, Dhaka-1213." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            brandOrange: {
+              500: '#F97316',
+              600: '#EA580C',
+            },
+            brandYellow: {
+              400: '#FACC15',
+              500: '#EAB308',
+            },
+            brandBlue: {
+              600: '#2563EB',
+              700: '#1D4ED8',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom subtle grid pattern & glassmorphism utilities */
+    .hero-bg {
+      background-image: linear-gradient(125deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.84) 55%, rgba(249, 115, 22, 0.45) 100%),
+        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .blueprint-pattern {
+      background-color: #0F172A;
+      background-image: radial-gradient(rgba(59, 130, 246, 0.18) 1px, transparent 1px),
+                        radial-gradient(rgba(249, 115, 22, 0.14) 1px, #0F172A 1px);
+      background-size: 28px 28px;
+      background-position: 0 0, 14px 14px;
+    }
+
+    /* Scroll reveal transition */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom range slider styling */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      border-radius: 999px;
+      background: #E2E8F0;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #F97316, #2563EB);
+      cursor: pointer;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(249, 115, 22, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+  <!-- ==================== 1. TOP ANNOUNCEMENT & CONTACT BAR ==================== -->
+  <div class="bg-gradient-to-r from-navy-900 via-slate-900 to-brandBlue-700 text-white text-xs sm:text-sm py-2.5 px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+        <span class="inline-flex items-center gap-1.5 text-slate-200">
+          <i class="fa-solid fa-location-dot text-brandYellow-400"></i>
+          <span>HOUSE-14, ROAD-03, BLOCK-A, BANANI, DHAKA-1213</span>
+        </span>
+        <span class="hidden sm:inline text-white/30">|</span>
+        <a href="tel:+8801700000000" class="inline-flex items-center gap-1.5 hover:text-brandYellow-400 transition">
+          <i class="fa-solid fa-phone text-brandOrange-500"></i>
+          <span>+880 2-9821450 / +880 1711-000000</span>
+        </a>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="hidden lg:inline-flex items-center gap-1.5 bg-white/10 px-2.5 py-0.5 rounded-full text-xs font-medium text-brandYellow-400">
+          <i class="fa-solid fa-certificate"></i> ISO 9001 & RAJUK Enlisted Builder
+        </span>
+        <div class="flex items-center gap-3 text-slate-300">
+          <a href="#contact" aria-label="Facebook" class="hover:text-brandOrange-500 transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#contact" aria-label="LinkedIn" class="hover:text-brandOrange-500 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#contact" aria-label="Instagram" class="hover:text-brandOrange-500 transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== STICKY GLASSMORPHISM NAVBAR ==================== -->
+  <header id="navbar" class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Custom SVG Brand Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brandOrange-500 via-amber-500 to-brandBlue-600 p-0.5 shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform">
+            <div class="w-full h-full bg-navy-900 rounded-[10px] flex items-center justify-center">
+              <svg class="w-7 h-7" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 28V12L18 5L30 12V28" stroke="#FACC15" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 15L18 27L25 15" stroke="#F97316" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 28H32" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <span class="font-display font-extrabold text-xl tracking-tight text-navy-900 block leading-none">
+              VELTRIX
+            </span>
+            <span class="text-[11px] font-bold tracking-widest uppercase text-brandOrange-600 block mt-0.5">
+              Construction Limited
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 font-medium text-sm text-slate-700">
+          <a href="#home" class="hover:text-brandOrange-600 transition">Home</a>
+          <a href="#about" class="hover:text-brandOrange-600 transition">About Us</a>
+          <a href="#services" class="hover:text-brandOrange-600 transition">Services</a>
+          <a href="#projects" class="hover:text-brandOrange-600 transition">Projects</a>
+          <a href="#estimator" class="inline-flex items-center gap-1.5 text-brandBlue-600 font-semibold hover:text-brandOrange-600 transition">
+            <i class="fa-solid fa-calculator text-xs"></i> Cost Estimator
+          </a>
+          <a href="#contact" class="hover:text-brandOrange-600 transition">Contact</a>
+        </nav>
+
+        <!-- Action CTA & Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <button onclick="openQuoteModal()" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brandOrange-500 to-amber-500 hover:from-brandOrange-600 hover:to-amber-600 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-md shadow-orange-500/25 hover:shadow-lg transition-all cursor-pointer">
+            <span>Get Free Quote</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+
+          <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-navy-900 transition">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="#home" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-orange-50 hover:text-brandOrange-600">Home</a>
+      <a href="#about" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-orange-50 hover:text-brandOrange-600">About Us</a>
+      <a href="#services" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-orange-50 hover:text-brandOrange-600">Services</a>
+      <a href="#projects" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-orange-50 hover:text-brandOrange-600">Projects</a>
+      <a href="#estimator" class="mobile-link block px-4 py-2.5 rounded-xl font-semibold text-brandBlue-600 bg-blue-50/70">Cost Estimator</a>
+      <a href="#contact" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-orange-50 hover:text-brandOrange-600">Contact</a>
+      <div class="pt-2">
+        <button onclick="openQuoteModal()" class="w-full bg-gradient-to-r from-brandOrange-500 to-brandBlue-600 text-white font-semibold py-3 rounded-xl shadow-md">
+          Get Free Quote
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section id="home" class="hero-bg relative text-white pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden">
+    <!-- Decorative colorful glow orbs -->
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-brandOrange-500/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-10 w-80 h-80 bg-brandBlue-600/25 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-brandYellow-400">
+            <span class="w-2 h-2 rounded-full bg-brandYellow-400 animate-ping"></span>
+            Trusted Civil Engineering & Construction Partner in Bangladesh
+          </div>
+
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight">
+            Building Tomorrow's Landmarks with
+            <span class="bg-gradient-to-r from-brandYellow-400 via-brandOrange-500 to-amber-300 bg-clip-text text-transparent">
+              Precision & Strength
+            </span>
+          </h1>
+
+          <p class="text-slate-200 text-base sm:text-lg max-w-2xl leading-relaxed">
+            Headquartered in Banani, Dhaka, <strong>Veltrix Construction Limited</strong> delivers world-class residential towers, commercial complexes, industrial facilities, and modern infrastructure engineered for durability and timeless aesthetics.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-brandOrange-500 to-amber-500 hover:from-brandOrange-600 hover:to-amber-600 text-white font-bold px-7 py-4 rounded-xl shadow-xl shadow-orange-500/30 hover:-translate-y-0.5 transition-all">
+              <span>Explore Projects</span>
+              <i class="fa-solid fa-building"></i>
+            </a>
+            <a href="#estimator" class="inline-flex items-center gap-2.5 bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/30 text-white font-bold px-7 py-4 rounded-xl hover:-translate-y-0.5 transition-all">
+              <i class="fa-solid fa-calculator text-brandYellow-400"></i>
+              <span>Calculate Project Cost</span>
+            </a>
+          </div>
+
+          <!-- Trust Highlights -->
+          <div class="pt-4 flex flex-wrap items-center gap-6 text-xs sm:text-sm text-slate-300">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-emerald-400 text-base"></i>
+              <span>BNBC Compliant Structural Design</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-clock text-brandYellow-400 text-base"></i>
+              <span>Guaranteed On-Time Handover</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase Card -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-navy-800/60 backdrop-blur-md p-3">
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
+              alt="Modern Architecture by Veltrix Construction Limited"
+              onerror="this.src='https://placehold.co/800x600/0F172A/F97316?text=Veltrix+Construction+Limited'"
+              class="w-full h-72 sm:h-80 object-cover rounded-2xl"
+            />
+            <!-- Floating Badge on Image -->
+            <div class="mt-3 bg-navy-900/90 rounded-2xl p-4 flex items-center justify-between border border-white/10">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-brandYellow-400 font-bold">Corporate Head Office</p>
+                <p class="text-sm font-semibold text-white mt-0.5">House-14, Road-03, Block-A, Banani</p>
+              </div>
+              <a href="#contact" class="w-10 h-10 rounded-xl bg-brandBlue-600 hover:bg-brandOrange-500 flex items-center justify-center text-white transition">
+                <i class="fa-solid fa-location-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Animated Counter Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-14">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 sm:p-6 hover:bg-white/15 transition">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brandOrange-500 to-amber-500 flex items-center justify-center text-white text-lg mb-3 shadow-lg">
+            <i class="fa-solid fa-city"></i>
+          </div>
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+            <span class="counter" data-target="150">0</span>+
+          </div>
+          <p class="text-slate-300 text-xs sm:text-sm font-medium mt-1">Projects Completed</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 sm:p-6 hover:bg-white/15 transition">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brandBlue-600 to-cyan-500 flex items-center justify-center text-white text-lg mb-3 shadow-lg">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+            <span class="counter" data-target="12">0</span>+
+          </div>
+          <p class="text-slate-300 text-xs sm:text-sm font-medium mt-1">Years Experience</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 sm:p-6 hover:bg-white/15 transition">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-lg mb-3 shadow-lg">
+            <i class="fa-solid fa-helmet-safety"></i>
+          </div>
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+            <span class="counter" data-target="100">0</span>%
+          </div>
+          <p class="text-slate-300 text-xs sm:text-sm font-medium mt-1">Safety Compliance</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 sm:p-6 hover:bg-white/15 transition">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center text-white text-lg mb-3 shadow-lg">
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+            <span class="counter" data-target="45">0</span>+
+          </div>
+          <p class="text-slate-300 text-xs sm:text-sm font-medium mt-1">Expert Engineers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. ABOUT US SECTION ==================== -->
+  <section id="about" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Image Collage -->
+        <div class="lg:col-span-6 reveal">
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80"
+              alt="Veltrix Engineering Team on Site"
+              onerror="this.src='https://placehold.co/800x600/1E293B/FFFFFF?text=Engineering+Excellence'"
+              class="w-full h-[420px] object-cover rounded-3xl shadow-xl"
+            />
+            <!-- Secondary Overlapping Card -->
+            <div class="hidden sm:block absolute -bottom-6 -right-6 bg-gradient-to-br from-brandBlue-600 to-navy-900 text-white p-6 rounded-2xl shadow-2xl max-w-xs border border-white/15">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-10 h-10 rounded-xl bg-brandYellow-400 text-navy-900 flex items-center justify-center font-extrabold text-lg">
+                  <i class="fa-solid fa-compass-drafting"></i>
+                </span>
+                <h4 class="font-display font-bold text-lg leading-tight">Dhaka's Premier Builders</h4>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                Operating from Banani, Dhaka-1213, delivering earthquake-resistant structures across Bangladesh.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Content & Interactive Tabs -->
+        <div class="lg:col-span-6 space-y-6 reveal">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 text-brandOrange-600 font-bold text-xs uppercase tracking-wider">
+            <i class="fa-solid fa-building-shield"></i> About Veltrix Construction Limited
+          </div>
+
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 leading-tight">
+            Engineering Excellence Rooted in Trust & Innovation
+          </h2>
+
+          <p class="text-slate-600 leading-relaxed">
+            <strong>Veltrix Construction Limited</strong> is a full-service civil engineering, architectural design, and construction firm based in <strong>Banani, Dhaka-1213</strong>. We combine cutting-edge structural technology, premium-grade materials, and transparent project management to turn ambitious blueprints into enduring landmarks.
+          </p>
+
+          <!-- Interactive Tabs: Mission, Vision, Safety -->
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+            <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3 mb-4">
+              <button onclick="switchAboutTab('mission', this)" class="about-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-brandOrange-500 text-white shadow-sm transition cursor-pointer">
+                Our Mission
+              </button>
+              <button onclick="switchAboutTab('vision', this)" class="about-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition cursor-pointer">
+                Our Vision
+              </button>
+              <button onclick="switchAboutTab('safety', this)" class="about-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition cursor-pointer">
+                Safety & Standards
+              </button>
+            </div>
+
+            <div id="tab-mission" class="about-tab-content text-sm text-slate-700 leading-relaxed">
+              To deliver superior construction and engineering solutions in Bangladesh through uncompromising quality control, transparent budgeting, and sustainable building practices that exceed client expectations.
+            </div>
+            <div id="tab-vision" class="about-tab-content hidden text-sm text-slate-700 leading-relaxed">
+              To be recognized as Bangladesh’s most trusted and innovative construction company—shaping modern urban skylines in Dhaka and beyond with smart, eco-conscious infrastructure.
+            </div>
+            <div id="tab-safety" class="about-tab-content hidden text-sm text-slate-700 leading-relaxed">
+              Every Veltrix site strictly follows Bangladesh National Building Code (BNBC) guidelines, ACI concrete standards, and zero-accident occupational health protocols supervised daily by certified safety engineers.
+            </div>
+          </div>
+
+          <!-- Core Value Pillars -->
+          <div class="grid sm:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-blue-50/80 border border-blue-100">
+              <i class="fa-solid fa-medal text-brandBlue-600 text-xl mb-2"></i>
+              <h4 class="font-bold text-navy-900 text-sm">Quality Assurance</h4>
+              <p class="text-xs text-slate-600 mt-1">100% lab-tested steel, cement & aggregates.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-orange-50/80 border border-orange-100">
+              <i class="fa-solid fa-microchip text-brandOrange-600 text-xl mb-2"></i>
+              <h4 class="font-bold text-navy-900 text-sm">Modern Engineering</h4>
+              <p class="text-xs text-slate-600 mt-1">BIM 3D modeling & seismic-resilient framing.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200">
+              <i class="fa-solid fa-stopwatch text-amber-600 text-xl mb-2"></i>
+              <h4 class="font-bold text-navy-900 text-sm">Timely Delivery</h4>
+              <p class="text-xs text-slate-600 mt-1">Milestone-tracked schedules with zero delays.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. COLORFUL SERVICES GRID ==================== -->
+  <section id="services" class="py-20 lg:py-28 bg-slate-100/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-brandBlue-700 font-bold text-xs uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-layer-group"></i> What We Build
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-navy-900">
+          Comprehensive Construction & Engineering Services
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          From architectural blueprints to turnkey handover, Veltrix Construction Limited provides end-to-end expertise across six specialized divisions.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Service 1 -->
+        <div class="reveal bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brandOrange-500 to-amber-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-orange-500/25 mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-3">
+              Residential & Commercial Buildings
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              High-rise apartments, luxury condominiums, corporate towers, and retail shopping complexes built with superior structural integrity.
+            </p>
+          </div>
+          <button onclick="openServiceModal('Residential & Commercial Buildings', 'We execute turnkey high-rise residential apartments, duplex residences, and modern corporate commercial towers across Dhaka. Our scope includes piling, RCC superstructure, MEP installation, facade glazing, and luxury interior finishing.', ['Earthquake-resistant RCC & Steel structures', 'RAJUK & BNBC compliant execution', 'Turnkey luxury apartments & corporate towers'])" class="inline-flex items-center gap-2 text-sm font-bold text-brandOrange-600 hover:text-brandBlue-600 transition cursor-pointer">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="reveal bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brandBlue-600 to-indigo-600 text-white flex items-center justify-center text-2xl shadow-lg shadow-blue-600/25 mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-bridge"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-3">
+              Civil & Infrastructure Engineering
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Heavy civil works including roads, culverts, drainage networks, embankments, and utility infrastructure engineered for longevity.
+            </p>
+          </div>
+          <button onclick="openServiceModal('Civil & Infrastructure Engineering', 'Our heavy civil engineering team delivers durable public and private infrastructure—spanning reinforced concrete roads, bridges, retaining walls, deep foundation piling, and modern storm drainage systems.', ['Deep piling & soil stabilization', 'Roadways, bridges & culverts', 'Industrial utility & drainage networks'])" class="inline-flex items-center gap-2 text-sm font-bold text-brandBlue-600 hover:text-brandOrange-600 transition cursor-pointer">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="reveal bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/25 mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-3">
+              Architectural & Interior Design
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Innovative 3D architectural visualization, space planning, sustainable facades, and bespoke corporate or residential interiors.
+            </p>
+          </div>
+          <button onclick="openServiceModal('Architectural & Interior Design', 'Our in-house architects and interior designers blend aesthetic elegance with functional space efficiency—offering 3D BIM walkthroughs, lighting design, acoustic corporate offices, and modern home interiors.', ['3D Architectural & Structural BIM Design', 'Corporate office & retail interior fit-outs', 'Sustainable daylight & ventilation planning'])" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 hover:text-brandOrange-600 transition cursor-pointer">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="reveal bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600 to-fuchsia-600 text-white flex items-center justify-center text-2xl shadow-lg shadow-purple-600/25 mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-hammer"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-3">
+              Structural Renovation & Retrofitting
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Seismic strengthening, structural retrofitting, vertical extensions, and complete modernization of existing buildings.
+            </p>
+          </div>
+          <button onclick="openServiceModal('Structural Renovation & Retrofitting', 'We assess, strengthen, and modernize aging buildings using carbon-fiber wrapping, micro-piling, steel jacketing, and modern facade upgrades to meet current safety codes.', ['DEA (Detailed Engineering Assessment)', 'Seismic retrofitting & column jacketing', 'Full commercial & residential remodeling'])" class="inline-flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-brandOrange-600 transition cursor-pointer">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="reveal bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-500 text-navy-900 flex items-center justify-center text-2xl shadow-lg shadow-amber-500/25 mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-industry"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-3">
+              Industrial & Warehouse Construction
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Pre-engineered steel buildings (PEB), RMG factory complexes, logistics warehouses, and heavy-load industrial flooring.
+            </p>
+          </div>
+          <button onclick="openServiceModal('Industrial & Warehouse Construction', 'Engineered for high operational efficiency, we construct LEED-compliant garment factories, steel warehouses, cold-storage facilities, and heavy-duty industrial floor slabs across Gazipur, Narayanganj, and Savar.', ['Pre-Engineered Steel Buildings (PEB)', 'Fire-safe & green factory compliance', 'Heavy-load VDF industrial flooring'])" class="inline-flex items-center gap-2 text-sm font-bold text-amber-600 hover:text-brandBlue-600 transition cursor-pointer">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="reveal bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500 to-orange-600 text-white flex items-center justify-center text-2xl shadow-lg shadow-rose-500/25 mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-3">
+              Project Management & Consultancy
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              BOQ cost estimation, soil testing, structural auditing, vendor procurement, and on-site quality & schedule supervision.
+            </p>
+          </div>
+          <button onclick="openServiceModal('Project Management & Consultancy', 'Maximize ROI and eliminate cost overruns with Veltrix PMC services—covering geotechnical soil investigation, accurate BOQ preparation, contractor auditing, and daily site supervision.', ['Geotechnical soil testing & structural vetting', 'Accurate BOQ & cost optimization', 'End-to-end site quality & timeline control'])" class="inline-flex items-center gap-2 text-sm font-bold text-rose-600 hover:text-brandBlue-600 transition cursor-pointer">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. FEATURED PROJECTS GALLERY ==================== -->
+  <section id="projects" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal">
+        <div>
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-brandOrange-600 font-bold text-xs uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-trophy"></i> Our Portfolio
+          </span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-navy-900">
+            Landmark Projects Across Dhaka
+          </h2>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap gap-2" id="project-filters">
+          <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-xl text-sm font-bold bg-navy-900 text-white shadow-md transition cursor-pointer">
+            All Projects
+          </button>
+          <button data-filter="Commercial" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition cursor-pointer">
+            Commercial
+          </button>
+          <button data-filter="Residential" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition cursor-pointer">
+            Residential
+          </button>
+          <button data-filter="Infrastructure" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition cursor-pointer">
+            Infrastructure
+          </button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300" data-category="Commercial">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+              alt="Veltrix Apex Corporate Tower"
+              onerror="this.src='https://placehold.co/800x600/0F172A/FACC15?text=Veltrix+Apex+Tower'"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brandBlue-600 text-white shadow">Commercial</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow">Completed</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-1.5 text-xs font-semibold text-brandOrange-600 mb-1.5">
+              <i class="fa-solid fa-location-dot"></i> Banani, Dhaka-1213
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Veltrix Apex Corporate Tower</h3>
+            <p class="text-slate-600 text-sm mb-5">
+              14-story smart glass-facade corporate tower featuring 3 basement parking levels and automated BMS.
+            </p>
+            <button onclick="openProjectModal('Veltrix Apex Corporate Tower', 'Banani, Dhaka-1213', 'Commercial', 'Completed (2025)', '68,000 Sq. Ft.', 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80', 'A flagship 14-story commercial office complex in the heart of Banani featuring double-glazed curtain walls, high-speed elevators, central HVAC, and earthquake-resistant shear-wall engineering.')" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brandOrange-500 text-navy-900 hover:text-white font-bold text-sm transition cursor-pointer">
+              View Project Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300" data-category="Residential">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+              alt="Gulshan Serenity Residences"
+              onerror="this.src='https://placehold.co/800x600/1E293B/F97316?text=Gulshan+Residences'"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brandOrange-500 text-white shadow">Residential</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow">Completed</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-1.5 text-xs font-semibold text-brandOrange-600 mb-1.5">
+              <i class="fa-solid fa-location-dot"></i> Gulshan-2, Dhaka
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Gulshan Serenity Residences</h3>
+            <p class="text-slate-600 text-sm mb-5">
+              Luxury G+11 lake-view residential condominium with rooftop infinity pool, gymnasium, and green atrium.
+            </p>
+            <button onclick="openProjectModal('Gulshan Serenity Residences', 'Gulshan-2, Dhaka', 'Residential', 'Completed (2024)', '54,000 Sq. Ft.', 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80', 'An ultra-luxury residential landmark offering single-floor 4,200 sq. ft. smart apartments, imported marble finishes, landscaped rooftop gardens, and 24/7 solar-backed power systems.')" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brandOrange-500 text-navy-900 hover:text-white font-bold text-sm transition cursor-pointer">
+              View Project Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300" data-category="Infrastructure">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=80"
+              alt="Purbachal Logistics & Bridge Corridor"
+              onerror="this.src='https://placehold.co/800x600/0F172A/38BDF8?text=Purbachal+Infrastructure'"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white shadow">Infrastructure</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500 text-navy-900 shadow">Ongoing</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-1.5 text-xs font-semibold text-brandOrange-600 mb-1.5">
+              <i class="fa-solid fa-location-dot"></i> Purbachal New Town, Dhaka
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Purbachal Expressway Link & Hub</h3>
+            <p class="text-slate-600 text-sm mb-5">
+              Heavy-duty reinforced concrete roadway, box culverts, and industrial warehousing logistics hub.
+            </p>
+            <button onclick="openProjectModal('Purbachal Expressway Link & Hub', 'Purbachal New Town, Dhaka', 'Infrastructure', 'Ongoing (85% Complete)', '120,000 Sq. Ft.', 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1000&q=80', 'Comprehensive civil infrastructure development comprising 3.2 km reinforced concrete access road, storm water box culverts, and a pre-engineered logistics warehouse park.')" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brandOrange-500 text-navy-900 hover:text-white font-bold text-sm transition cursor-pointer">
+              View Project Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300" data-category="Residential">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+              alt="Uttara Emerald Duplex Villas"
+              onerror="this.src='https://placehold.co/800x600/1E293B/FACC15?text=Uttara+Duplex+Villas'"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brandOrange-500 text-white shadow">Residential</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow">Completed</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-1.5 text-xs font-semibold text-brandOrange-600 mb-1.5">
+              <i class="fa-solid fa-location-dot"></i> Sector-07, Uttara, Dhaka
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Uttara Emerald Duplex Villas</h3>
+            <p class="text-slate-600 text-sm mb-5">
+              Contemporary triplex & duplex signature homes designed with sustainable skylights and private courtyards.
+            </p>
+            <button onclick="openProjectModal('Uttara Emerald Duplex Villas', 'Sector-07, Uttara, Dhaka', 'Residential', 'Completed (2025)', '18,500 Sq. Ft.', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80', 'Bespoke contemporary villa enclave blending exposed architectural concrete, warm teak wood louvers, rainwater harvesting, and smart home automation.')" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brandOrange-500 text-navy-900 hover:text-white font-bold text-sm transition cursor-pointer">
+              View Project Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300" data-category="Commercial">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80"
+              alt="Dhanmondi Metro Trade Center"
+              onerror="this.src='https://placehold.co/800x600/0F172A/F97316?text=Dhanmondi+Trade+Center'"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brandBlue-600 text-white shadow">Commercial</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500 text-navy-900 shadow">Ongoing</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-1.5 text-xs font-semibold text-brandOrange-600 mb-1.5">
+              <i class="fa-solid fa-location-dot"></i> Satmasjid Road, Dhanmondi
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Dhanmondi Metro Trade Center</h3>
+            <p class="text-slate-600 text-sm mb-5">
+              Multi-level retail plaza, diagnostic hub, and IT software park with high-capacity escalators and fire safety.
+            </p>
+            <button onclick="openProjectModal('Dhanmondi Metro Trade Center', 'Satmasjid Road, Dhanmondi, Dhaka', 'Commercial', 'Ongoing (70% Complete)', '92,000 Sq. Ft.', 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=80', 'A vibrant 12-story commercial and retail landmark equipped with NFPA-standard fire suppression, double-height retail atrium, and dedicated corporate floors.')" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brandOrange-500 text-navy-900 hover:text-white font-bold text-sm transition cursor-pointer">
+              View Project Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card reveal group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300" data-category="Infrastructure">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80"
+              alt="Gazipur Green Textile & PEB Park"
+              onerror="this.src='https://placehold.co/800x600/1E293B/38BDF8?text=Gazipur+Industrial+Park'"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white shadow">Infrastructure</span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow">Completed</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-1.5 text-xs font-semibold text-brandOrange-600 mb-1.5">
+              <i class="fa-solid fa-location-dot"></i> Tongi-Gazipur Industrial Zone
+            </div>
+            <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Gazipur Green Textile & PEB Complex</h3>
+            <p class="text-slate-600 text-sm mb-5">
+              LEED-certified pre-engineered steel manufacturing plant with ETP facility and solar rooftop array.
+            </p>
+            <button onclick="openProjectModal('Gazipur Green Textile & PEB Complex', 'Tongi-Gazipur Industrial Zone', 'Infrastructure', 'Completed (2024)', '145,000 Sq. Ft.', 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80', 'An eco-friendly industrial manufacturing facility built with wide-span pre-engineered steel trusses, high-load laser-screed floors, and integrated rainwater recycling.')" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brandOrange-500 text-navy-900 hover:text-white font-bold text-sm transition cursor-pointer">
+              View Project Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. INTERACTIVE CONSTRUCTION COST ESTIMATOR ==================== -->
+  <section id="estimator" class="py-20 lg:py-28 blueprint-pattern text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandYellow-400/15 border border-brandYellow-400/30 text-brandYellow-400 font-bold text-xs uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-calculator"></i> Instant Budget Planner
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+          Interactive Construction Cost Estimator
+        </h2>
+        <p class="text-slate-300 mt-3 text-base">
+          Estimate your approximate construction investment and timeline in seconds based on current Dhaka market rates, then send it directly to our Banani engineering desk.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-stretch reveal">
+        <!-- Calculator Inputs Panel -->
+        <div class="lg:col-span-7 bg-white text-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <!-- Project Type -->
+            <div>
+              <label for="calc-type" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                1. Project Type
+              </label>
+              <select id="calc-type" class="w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-slate-50 font-semibold text-navy-900 focus:ring-2 focus:ring-brandOrange-500 focus:border-brandOrange-500 outline-none">
+                <option value="2600" data-name="Residential Building">Residential Building (G+ Floors)</option>
+                <option value="3100" data-name="Commercial Complex">Commercial Complex / Office</option>
+                <option value="3400" data-name="Duplex / Luxury Villa">Duplex / Signature Villa</option>
+                <option value="1650" data-name="Structural Renovation">Structural Renovation & Interior</option>
+              </select>
+            </div>
+
+            <!-- Finish Quality Tier -->
+            <div>
+              <label for="calc-tier" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                2. Construction Finish Tier
+              </label>
+              <select id="calc-tier" class="w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-slate-50 font-semibold text-navy-900 focus:ring-2 focus:ring-brandBlue-600 focus:border-brandBlue-600 outline-none">
+                <option value="1.0" data-name="Standard Finish">Standard (Grade-A Structural + Standard Fit)</option>
+                <option value="1.25" selected data-name="Premium Finish">Premium (Imported Tiles, Modern Facade & MEP)</option>
+                <option value="1.55" data-name="Luxury Turnkey">Luxury (Marble, Smart Automation & Turnkey)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Total Area Slider + Number Input -->
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <label for="calc-area-range" class="text-xs font-bold uppercase tracking-wider text-slate-600">
+                3. Total Construction Area (Sq. Ft.)
+              </label>
+              <div class="flex items-center gap-2">
+                <input
+                  type="number"
+                  id="calc-area-input"
+                  min="1000"
+                  max="100000"
+                  step="500"
+                  value="6000"
+                  class="w-28 px-3 py-1.5 rounded-lg border border-slate-300 font-display font-bold text-right text-brandBlue-600 bg-white"
+                />
+                <span class="text-xs font-bold text-slate-500">Sq. Ft.</span>
+              </div>
+            </div>
+            <input
+              type="range"
+              id="calc-area-range"
+              min="1000"
+              max="50000"
+              step="500"
+              value="6000"
+              class="w-full"
+            />
+            <div class="flex justify-between text-[11px] font-semibold text-slate-400 mt-1.5">
+              <span>1,000 sq.ft</span>
+              <span>15,000 sq.ft</span>
+              <span>30,000 sq.ft</span>
+              <span>50,000+ sq.ft</span>
+            </div>
+          </div>
+
+          <!-- Number of Floors -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+              4. Number of Floors / Stories
+            </label>
+            <div class="grid grid-cols-4 gap-3" id="floor-selector">
+              <button type="button" data-floors="2" data-mult="1.0" class="floor-btn py-3 rounded-xl font-bold text-sm border border-slate-200 bg-slate-50 text-slate-700 hover:border-brandOrange-500 transition cursor-pointer">
+                1–3 Floors
+              </button>
+              <button type="button" data-floors="6" data-mult="1.05" class="floor-btn active py-3 rounded-xl font-bold text-sm border-2 border-brandOrange-500 bg-orange-50 text-brandOrange-600 transition cursor-pointer">
+                4–7 Floors
+              </button>
+              <button type="button" data-floors="10" data-mult="1.12" class="floor-btn py-3 rounded-xl font-bold text-sm border border-slate-200 bg-slate-50 text-slate-700 hover:border-brandOrange-500 transition cursor-pointer">
+                8–12 Floors
+              </button>
+              <button type="button" data-floors="15" data-mult="1.20" class="floor-btn py-3 rounded-xl font-bold text-sm border border-slate-200 bg-slate-50 text-slate-700 hover:border-brandOrange-500 transition cursor-pointer">
+                13+ High-Rise
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Result Output Card -->
+        <div class="lg:col-span-5 bg-gradient-to-br from-brandBlue-600 via-indigo-700 to-navy-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/15 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-white/15 pb-4 mb-6">
+              <span class="text-xs font-bold uppercase tracking-widest text-brandYellow-400">Estimated Investment</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-semibold">Dhaka Rate Index</span>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <p class="text-xs text-blue-200 uppercase font-semibold">Total Estimated Cost (BDT)</p>
+                <div class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-1" id="est-bdt">
+                  ৳ 2,04,75,000
+                </div>
+                <p class="text-xs text-brandYellow-400 font-semibold mt-1" id="est-crore">
+                  ≈ 2.05 Crore BDT (৳ 3,413 / sq.ft)
+                </p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 pt-3">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
+                  <p class="text-xs text-blue-200">Approx. USD Equivalent</p>
+                  <p class="font-display font-bold text-xl text-white mt-1" id="est-usd">$170,625</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
+                  <p class="text-xs text-blue-200">Estimated Timeline</p>
+                  <p class="font-display font-bold text-xl text-brandYellow-400 mt-1" id="est-timeline">14 Months</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-xs text-blue-100/80 mt-5 leading-relaxed">
+              *Note: Preliminary ballpark estimate covering foundation, RCC structure, brickwork, and MEP finishing. Soil test & structural BOQ finalize exact figures.
+            </p>
+          </div>
+
+          <button onclick="sendEstimateToForm()" class="mt-6 w-full py-4 px-6 rounded-xl bg-gradient-to-r from-brandOrange-500 to-brandYellow-400 hover:from-brandOrange-600 hover:to-brandYellow-500 text-navy-900 font-extrabold text-sm sm:text-base shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>Lock Estimate & Request Detailed BOQ</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. CLIENT TESTIMONIALS & PARTNERS ==================== -->
+  <section class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-star"></i> Client Endorsements
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-navy-900">
+          Trusted by Landowners & Corporate Leaders
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-7 mb-16">
+        <!-- Testimonial 1 -->
+        <div class="reveal bg-white p-7 rounded-3xl border border-slate-200 shadow-sm">
+          <div class="flex text-brandYellow-400 text-sm gap-1 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            "Veltrix Construction Limited completed our 10-story commercial building in Banani two months ahead of schedule. Their structural quality and transparency in BOQ billing are unmatched in Dhaka."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brandBlue-600 to-indigo-600 text-white font-bold flex items-center justify-center">
+              MR
+            </div>
+            <div>
+              <h4 class="font-bold text-navy-900 text-sm">Mahmudur Rahman</h4>
+              <p class="text-xs text-slate-500">Managing Director, Apex Apparel Group</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="reveal bg-white p-7 rounded-3xl border border-slate-200 shadow-sm">
+          <div class="flex text-brandYellow-400 text-sm gap-1 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            "From soil testing to final interior handover of our Gulshan residence, Veltrix’s engineers kept us updated every week with lab reports and drone progress photos."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brandOrange-500 to-amber-500 text-white font-bold flex items-center justify-center">
+              FA
+            </div>
+            <div>
+              <h4 class="font-bold text-navy-900 text-sm">Dr. Farhana Ahmed</h4>
+              <p class="text-xs text-slate-500">Landowner, Gulshan-2, Dhaka</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="reveal bg-white p-7 rounded-3xl border border-slate-200 shadow-sm">
+          <div class="flex text-brandYellow-400 text-sm gap-1 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            "Their pre-engineered steel warehouse construction in Gazipur met every international fire and structural compliance audit on the first inspection."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-white font-bold flex items-center justify-center">
+              TK
+            </div>
+            <div>
+              <h4 class="font-bold text-navy-900 text-sm">Engr. Tanvir Kabir</h4>
+              <p class="text-xs text-slate-500">Director of Operations, Metro Logistics Ltd.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trusted Material & Certification Partners Strip -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-wrap items-center justify-around gap-6 text-slate-400 font-display font-extrabold text-sm sm:text-base tracking-wider uppercase">
+        <span class="flex items-center gap-2 hover:text-navy-900 transition"><i class="fa-solid fa-shield-cat text-brandOrange-500"></i> BSRM Xtreme Steel</span>
+        <span class="flex items-center gap-2 hover:text-navy-900 transition"><i class="fa-solid fa-cubes text-brandBlue-600"></i> LafargeHolcim</span>
+        <span class="flex items-center gap-2 hover:text-navy-900 transition"><i class="fa-solid fa-check-double text-emerald-600"></i> BNBC Certified</span>
+        <span class="flex items-center gap-2 hover:text-navy-900 transition"><i class="fa-solid fa-building-columns text-purple-600"></i> RAJUK Enlisted</span>
+        <span class="flex items-center gap-2 hover:text-navy-900 transition"><i class="fa-solid fa-award text-amber-500"></i> ISO 9001:2015</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. CONTACT & GET A QUOTE SECTION ==================== -->
+  <section id="contact" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-brandBlue-700 font-bold text-xs uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-headset"></i> Get In Touch
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-navy-900">
+          Start Your Project with Veltrix Construction Limited
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          Visit our Banani corporate headquarters or send us your project requirements for a free engineering consultation and BOQ proposal.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <!-- Left: Official Office Details & Banani Google Map -->
+        <div class="lg:col-span-5 space-y-6 reveal">
+          <div class="bg-gradient-to-br from-navy-900 to-slate-800 text-white rounded-3xl p-7 shadow-xl space-y-5">
+            <h3 class="font-display font-bold text-xl text-brandYellow-400">Corporate Head Office</h3>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brandOrange-500/20 text-brandOrange-500 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-location-dot text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-slate-400 font-bold">Official Address</p>
+                <p class="font-semibold text-sm sm:text-base mt-0.5 leading-snug">
+                  HOUSE-14, ROAD-03, BLOCK-A, BANANI, DHAKA-1213, BANGLADESH
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brandBlue-600/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-phone-volume text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-slate-400 font-bold">Phone & Hotline</p>
+                <p class="font-semibold text-sm mt-0.5">+880 2-9821450 | +880 1711-000000</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-envelope text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-slate-400 font-bold">Email Desk</p>
+                <p class="font-semibold text-sm mt-0.5">info@veltrixconstruction.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-brandYellow-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-clock text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-slate-400 font-bold">Office Hours</p>
+                <p class="font-semibold text-sm mt-0.5">Saturday – Thursday: 9:30 AM – 6:30 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Google Map Centered on Block-A, Banani, Dhaka-1213 -->
+          <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-md h-64 bg-slate-100">
+            <iframe
+              title="Veltrix Construction Limited Banani Location"
+              src="https://www.google.com/maps?q=Block+A,+Banani,+Dhaka+1213,+Bangladesh&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Right: Validated Quote Request Form -->
+        <div class="lg:col-span-7 reveal">
+          <form id="quote-form" class="bg-slate-50 border border-slate-200 rounded-3xl p-7 sm:p-10 shadow-sm space-y-5">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+              <div>
+                <h3 class="font-display font-bold text-2xl text-navy-900">Request a Free Consultation & Quote</h3>
+                <p class="text-xs text-slate-500 mt-1">Our senior civil engineer will respond within 24 business hours.</p>
+              </div>
+              <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">
+                <i class="fa-solid fa-lock"></i> Confidential
+              </span>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="client-name" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Full Name *</label>
+                <input type="text" id="client-name" required placeholder="e.g., Tanvir Ahmed" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-brandOrange-500 focus:border-brandOrange-500 outline-none text-sm" />
+              </div>
+              <div>
+                <label for="client-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Phone Number *</label>
+                <input type="tel" id="client-phone" required placeholder="e.g., +880 17XX-XXXXXX" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-brandOrange-500 focus:border-brandOrange-500 outline-none text-sm" />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="client-email" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Email Address *</label>
+                <input type="email" id="client-email" required placeholder="you@company.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-brandOrange-500 focus:border-brandOrange-500 outline-none text-sm" />
+              </div>
+              <div>
+                <label for="project-service" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Project Category *</label>
+                <select id="project-service" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-brandOrange-500 focus:border-brandOrange-500 outline-none text-sm font-medium">
+                  <option value="Residential Building">Residential Building Construction</option>
+                  <option value="Commercial Complex">Commercial Complex / Office Tower</option>
+                  <option value="Civil & Infrastructure">Civil & Infrastructure Engineering</option>
+                  <option value="Architectural & Interior">Architectural & Interior Design</option>
+                  <option value="Renovation & Retrofitting">Structural Renovation & Retrofitting</option>
+                  <option value="Industrial & Warehouse">Industrial & Warehouse Construction</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="project-location" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Plot / Site Location</label>
+              <input type="text" id="project-location" placeholder="e.g., Banani, Gulshan, Uttara, Bashundhara R/A..." class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-brandOrange-500 focus:border-brandOrange-500 outline-none text-sm" />
+            </div>
+
+            <div>
+              <label for="project-details" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Project Scope & Estimated Budget Details *</label>
+              <textarea id="project-details" rows="4" required placeholder="Describe your land size (Katha/Sq.Ft), desired floors, or any specific engineering requirements..." class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-brandOrange-500 focus:border-brandOrange-500 outline-none text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-brandOrange-500 via-amber-500 to-brandBlue-600 hover:opacity-95 text-white font-extrabold text-base shadow-lg shadow-orange-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer">
+              <span>Submit Quote Request</span>
+              <i class="fa-solid fa-circle-check"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 9. MULTI-COLUMN CORPORATE FOOTER ==================== -->
+  <footer class="bg-navy-900 text-slate-300 pt-16 pb-8 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        <!-- Brand Column -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brandOrange-500 to-brandBlue-600 flex items-center justify-center text-white font-display font-extrabold text-xl">
+              V
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-lg text-white block leading-none">VELTRIX</span>
+              <span class="text-[11px] font-bold tracking-widest uppercase text-brandYellow-400">Construction Limited</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            A premier engineering, architectural, and construction company committed to building resilient residential, commercial, and industrial landmarks across Bangladesh.
+          </p>
+          <div class="text-xs text-slate-300 bg-white/5 p-3.5 rounded-xl border border-white/10">
+            <strong class="text-brandYellow-400 block mb-1">Registered Office:</strong>
+            HOUSE-14, ROAD-03, BLOCK-A, BANANI, DHAKA-1213
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-display font-bold text-white text-base">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#home" class="hover:text-brandOrange-500 transition">Home</a></li>
+            <li><a href="#about" class="hover:text-brandOrange-500 transition">About Us</a></li>
+            <li><a href="#services" class="hover:text-brandOrange-500 transition">Our Services</a></li>
+            <li><a href="#projects" class="hover:text-brandOrange-500 transition">Featured Projects</a></li>
+            <li><a href="#estimator" class="hover:text-brandOrange-500 transition">Cost Estimator</a></li>
+            <li><a href="#contact" class="hover:text-brandOrange-500 transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Core Services -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-base">Core Divisions</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#services" class="hover:text-brandYellow-400 transition">High-Rise Residential & Commercial</a></li>
+            <li><a href="#services" class="hover:text-brandYellow-400 transition">Civil & Infrastructure Works</a></li>
+            <li><a href="#services" class="hover:text-brandYellow-400 transition">Architectural & 3D BIM Design</a></li>
+            <li><a href="#services" class="hover:text-brandYellow-400 transition">PEB Steel & Industrial Parks</a></li>
+            <li><a href="#services" class="hover:text-brandYellow-400 transition">Seismic Retrofitting & Audits</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-base">Engineering Insights</h4>
+          <p class="text-sm text-slate-400">
+            Subscribe for quarterly construction cost indices in Dhaka and project updates.
+          </p>
+          <form id="newsletter-form" class="space-y-2.5">
+            <input type="email" id="newsletter-email" required placeholder="Enter your email" class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-brandOrange-500" />
+            <button type="submit" class="w-full py-2.5 rounded-xl bg-brandOrange-500 hover:bg-brandOrange-600 text-white font-bold text-sm transition cursor-pointer">
+              Subscribe Now
+            </button>
+          </form>
+          <p id="newsletter-msg" class="text-xs text-emerald-400 hidden font-medium"></p>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>&copy; <span id="current-year"></span> <strong>Veltrix Construction Limited</strong>. All Rights Reserved.</p>
+        <p>HOUSE-14, ROAD-03, BLOCK-A, BANANI, DHAKA-1213</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE MODALS & TOAST NOTIFICATION ==================== -->
+
+  <!-- 1. Service Detail Modal -->
+  <div id="service-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy-900/75 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-fadeIn">
+      <button onclick="closeModal('service-modal')" aria-label="Close Modal" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 cursor-pointer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <span class="inline-block px-3 py-1 rounded-full bg-orange-100 text-brandOrange-600 text-xs font-bold uppercase mb-2">Veltrix Division</span>
+      <h3 id="service-modal-title" class="font-display font-extrabold text-2xl text-navy-900 mb-3"></h3>
+      <p id="service-modal-desc" class="text-slate-600 text-sm leading-relaxed mb-5"></p>
+      <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-6">
+        <p class="text-xs font-bold uppercase text-slate-500 mb-2">Key Deliverables:</p>
+        <ul id="service-modal-list" class="space-y-2 text-sm text-navy-900 font-medium"></ul>
+      </div>
+      <div class="flex gap-3">
+        <button onclick="closeModal('service-modal'); scrollToContactWithService();" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-brandOrange-500 to-brandBlue-600 text-white font-bold text-sm shadow-md cursor-pointer">
+          Request Quote for This Service
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Project Lightbox Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy-900/80 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative">
+      <button onclick="closeModal('project-modal')" aria-label="Close Modal" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-navy-900/80 hover:bg-brandOrange-500 text-white flex items-center justify-center transition cursor-pointer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="proj-modal-img" src="" alt="Project Preview" class="w-full h-64 sm:h-72 object-cover" />
+      <div class="p-6 sm:p-8">
+        <div class="flex flex-wrap items-center gap-2 mb-2">
+          <span id="proj-modal-cat" class="px-3 py-1 rounded-full bg-blue-100 text-brandBlue-700 text-xs font-bold"></span>
+          <span id="proj-modal-status" class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold"></span>
+        </div>
+        <h3 id="proj-modal-title" class="font-display font-extrabold text-2xl text-navy-900"></h3>
+        <p id="proj-modal-loc" class="text-xs font-semibold text-brandOrange-600 mt-1 mb-4"></p>
+        <p id="proj-modal-desc" class="text-slate-600 text-sm leading-relaxed mb-5"></p>
+        <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+          <div>
+            <span class="text-xs text-slate-400 block">Built-Up Area</span>
+            <strong id="proj-modal-area" class="text-navy-900 font-display text-base"></strong>
+          </div>
+          <a href="#contact" onclick="closeModal('project-modal')" class="px-5 py-2.5 rounded-xl bg-navy-900 hover:bg-brandOrange-500 text-white font-bold text-sm transition">
+            Build Similar Project
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Quick Quote Modal (Triggered from Top Navbar Button) -->
+  <div id="quick-quote-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy-900/75 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeModal('quick-quote-modal')" aria-label="Close Modal" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 cursor-pointer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-brandOrange-600 text-xs font-bold mb-2">
+        <i class="fa-solid fa-bolt"></i> Fast Track Consultation
+      </div>
+      <h3 class="font-display font-extrabold text-2xl text-navy-900 mb-1">Get a Free Quote</h3>
+      <p class="text-xs text-slate-500 mb-5">Veltrix Construction Limited • Banani, Dhaka-1213</p>
+
+      <form id="modal-quote-form" class="space-y-4">
+        <input type="text" required placeholder="Your Full Name *" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brandOrange-500 outline-none" />
+        <input type="tel" required placeholder="Phone Number (+880) *" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brandOrange-500 outline-none" />
+        <select class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-brandOrange-500 outline-none">
+          <option>Residential Building</option>
+          <option>Commercial Complex</option>
+          <option>Architectural & Interior</option>
+          <option>Industrial / Warehouse</option>
+        </select>
+        <textarea rows="3" required placeholder="Brief project location & land area..." class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brandOrange-500 outline-none"></textarea>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brandOrange-500 to-brandBlue-600 text-white font-bold text-sm shadow-lg cursor-pointer">
+          Send Instant Inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. Toast Notification Banner (No alert() used!) -->
+  <div id="toast-box" class="fixed bottom-6 right-6 z-50 hidden max-w-sm bg-navy-900 text-white px-5 py-4 rounded-2xl shadow-2xl border border-brandYellow-400/40 flex items-start gap-3 transition-all">
+    <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 mt-0.5">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div>
+      <h4 id="toast-title" class="font-bold text-sm text-brandYellow-400">Success!</h4>
+      <p id="toast-message" class="text-xs text-slate-200 mt-0.5 leading-relaxed"></p>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT INTERACTIVITY ==================== -->
+  <script>
+    // Set current footer year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // 1. Mobile Hamburger Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // 2. Animated Counters on Scroll
+    let countersAnimated = false;
+    function animateCounters() {
+      if (countersAnimated) return;
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 1600;
+        const stepTime = 20;
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent = target;
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current);
+          }
+        }, stepTime);
+      });
+      countersAnimated = true;
+    }
+
+    // Trigger counters & scroll reveal animations
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach(el => observer.observe(el));
+    window.addEventListener('load', animateCounters);
+
+    // 3. About Us Interactive Tabs
+    function switchAboutTab(tabKey, btnElement) {
+      document.querySelectorAll('.about-tab-content').forEach(el => el.classList.add('hidden'));
+      document.getElementById('tab-' + tabKey).classList.remove('hidden');
+
+      document.querySelectorAll('.about-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-brandOrange-500', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-white', 'text-slate-700');
+      });
+      btnElement.classList.remove('bg-white', 'text-slate-700');
+      btnElement.classList.add('bg-brandOrange-500', 'text-white', 'shadow-sm');
+    }
+
+    // 4. Featured Projects Category Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-filter');
+
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-navy-900', 'text-white', 'shadow-md');
+          b.classList.add('bg-slate-100', 'text-slate-700');
+        });
+        btn.classList.remove('bg-slate-100', 'text-slate-700');
+        btn.classList.add('bg-navy-900', 'text-white', 'shadow-md');
+
+        projectCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (category === 'all' || cardCat === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 5. Interactive Construction Cost Estimator
+    const calcType = document.getElementById('calc-type');
+    const calcTier = document.getElementById('calc-tier');
+    const calcAreaRange = document.getElementById('calc-area-range');
+    const calcAreaInput = document.getElementById('calc-area-input');
+    const floorButtons = document.querySelectorAll('.floor-btn');
+    let selectedFloorMult = 1.05;
+    let selectedFloorLabel = '4–7 Floors';
+
+    function updateEstimate() {
+      const baseRate = parseFloat(calcType.value);
+      const tierMult = parseFloat(calcTier.value);
+      let area = parseFloat(calcAreaInput.value) || 1000;
+      if (area < 500) area = 500;
+
+      const ratePerSqFt = Math.round(baseRate * tierMult * selectedFloorMult);
+      const totalBDT = Math.round(area * ratePerSqFt);
+      const totalCrore = (totalBDT / 10000000).toFixed(2);
+      const totalUSD = Math.round(totalBDT / 120); // Approx 120 BDT/USD
+      const months = Math.max(6, Math.round((area / 1200) + (selectedFloorMult * 6)));
+
+      document.getElementById('est-bdt').textContent = '৳ ' + totalBDT.toLocaleString('en-IN');
+      document.getElementById('est-crore').textContent = `≈ ${totalCrore} Crore BDT (৳ ${ratePerSqFt.toLocaleString('en-IN')} / sq.ft)`;
+      document.getElementById('est-usd').textContent = '$' + totalUSD.toLocaleString('en-US');
+      document.getElementById('est-timeline').textContent = `${months} Months`;
+    }
+
+    calcType.addEventListener('change', updateEstimate);
+    calcTier.addEventListener('change', updateEstimate);
+
+    calcAreaRange.addEventListener('input', (e) => {
+      calcAreaInput.value = e.target.value;
+      updateEstimate();
+    });
+
+    calcAreaInput.addEventListener('input', (e) => {
+      const val = Math.min(50000, Math.max(1000, Number(e.target.value) || 1000));
+      calcAreaRange.value = val;
+      updateEstimate();
+    });
+
+    floorButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        floorButtons.forEach(b => {
+          b.classList.remove('border-2', 'border-brandOrange-500', 'bg-orange-50', 'text-brandOrange-600');
+          b.classList.add('border', 'border-slate-200', 'bg-slate-50', 'text-slate-700');
+        });
+        btn.classList.remove('border', 'border-slate-200', 'bg-slate-50', 'text-slate-700');
+        btn.classList.add('border-2', 'border-brandOrange-500', 'bg-orange-50', 'text-brandOrange-600');
+
+        selectedFloorMult = parseFloat(btn.getAttribute('data-mult'));
+        selectedFloorLabel = btn.textContent.trim();
+        updateEstimate();
+      });
+    });
+
+    // Send Cost Estimate directly into Contact Form
+    function sendEstimateToForm() {
+      const typeName = calcType.options[calcType.selectedIndex].getAttribute('data-name');
+      const tierName = calcTier.options[calcTier.selectedIndex].getAttribute('data-name');
+      const area = calcAreaInput.value;
+      const bdtText = document.getElementById('est-bdt').textContent.trim();
+      const timelineText = document.getElementById('est-timeline').textContent.trim();
+
+      const detailsBox = document.getElementById('project-details');
+      detailsBox.value = `Cost Estimator Summary:\n• Project Type: ${typeName}\n• Finish Tier: ${tierName}\n• Total Area: ${Number(area).toLocaleString()} Sq. Ft. (${selectedFloorLabel})\n• Estimated Budget: ${bdtText} (Approx. ${timelineText})\n\nPlease contact me for a detailed soil test & BOQ consultation.`;
+
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      showToast('Estimate Attached!', 'Your estimated budget summary has been pre-filled into the quote form below.');
+    }
+
+    // Initialize calculator on load
+    updateEstimate();
+
+    // 6. Modals Management
+    let activeSelectedService = '';
+
+    function openServiceModal(title, desc, bullets) {
+      activeSelectedService = title;
+      document.getElementById('service-modal-title').textContent = title;
+      document.getElementById('service-modal-desc').textContent = desc;
+      const listEl = document.getElementById('service-modal-list');
+      listEl.innerHTML = bullets.map(item => `<li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brandOrange-500"></i><span>${item}</span></li>`).join('');
+      const modal = document.getElementById('service-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function scrollToContactWithService() {
+      document.getElementById('project-details').value = `Inquiry regarding: ${activeSelectedService}.\nPlease share consultation availability at your Banani office.`;
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openProjectModal(title, location, category, status, area, imgUrl, desc) {
+      document.getElementById('proj-modal-title').textContent = title;
+      document.getElementById('proj-modal-loc').innerHTML = `<i class="fa-solid fa-location-dot mr-1"></i> ${location}`;
+      document.getElementById('proj-modal-cat').textContent = category;
+      document.getElementById('proj-modal-status').textContent = status;
+      document.getElementById('proj-modal-area').textContent = area;
+      document.getElementById('proj-modal-img').src = imgUrl;
+      document.getElementById('proj-modal-desc').textContent = desc;
+
+      const modal = document.getElementById('project-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function openQuoteModal() {
+      const modal = document.getElementById('quick-quote-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Close modals when clicking outside backdrop
+    ['service-modal', 'project-modal', 'quick-quote-modal'].forEach(id => {
+      document.getElementById(id).addEventListener('click', (e) => {
+        if (e.target.id === id) closeModal(id);
+      });
+    });
+
+    // 7. Toast Notification Helper
+    let toastTimeout;
+    function showToast(title, message) {
+      const toast = document.getElementById('toast-box');
+      document.getElementById('toast-title').textContent = title;
+      document.getElementById('toast-message').textContent = message;
+      toast.classList.remove('hidden');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 5000);
+    }
+
+    // 8. Form Submissions (Main Quote Form, Modal Form, Newsletter)
+    document.getElementById('quote-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const clientName = document.getElementById('client-name').value;
+      showToast('Quote Request Received!', `Thank you, ${clientName}. Our Banani engineering team will contact you within 24 hours.`);
+      this.reset();
+    });
+
+    document.getElementById('modal-quote-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      closeModal('quick-quote-modal');
+      showToast('Fast-Track Inquiry Sent!', 'A senior project engineer from Veltrix Construction Limited will call you shortly.');
+      this.reset();
+    });
+
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const msg = document.getElementById('newsletter-msg');
+      msg.textContent = 'Subscribed! You will receive our quarterly Dhaka construction insights.';
+      msg.classList.remove('hidden');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
